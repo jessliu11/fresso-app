@@ -2,10 +2,15 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 
-const NavBar = () => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false); // default 'isOpen' is false
 
-    //insert navLinks here
+    const navLinks = [
+        { name: "Menu", href: "#menu" },
+        { name: "About", href: "#about" },
+        { name: "Location", href: "#location" },
+        { name: "Contact", href: "#contact" },
+    ];
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -39,10 +44,29 @@ const NavBar = () => {
                     </div>
 
                     {/* Mobile Menu Button */}
-                    
+                    { isOpen && (
+                        <div className="md:hidden py-4 border-t border-border animate-fade-in">
+                            <div className="flex flex-col gap-4">
+                                {navLinks.map((link) => (
+                                    <a
+                                        key={link.name}
+                                        href={link.href}
+                                        className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+                                    >
+                                        {link.name}
+                                    </a>
+                                ))}
+                                <Button variant="matcha" className="mt-2">
+                                    Order Now
+                                </Button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </nav>
-    )
+    );
 
-}
+};
+
+export default Navbar;
