@@ -62,7 +62,20 @@ export default {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+  			matcha: {
+  				DEFAULT: 'hsl(var(--matcha))',
+  				light: 'hsl(var(--matcha-light))',
+  				dark: 'hsl(var(--matcha-dark))',
+  				foreground: 'hsl(var(--warm-white))'
+  			},
+  			coffee: {
+  				DEFAULT: 'hsl(var(--coffee))',
+  				light: 'hsl(var(--coffee-light))',
+  				dark: 'hsl(var(--coffee-dark))'
+  			},
+  			cream: 'hsl(var(--cream))',
+  			'warm-white': 'hsl(var(--warm-white))'
   		},
   		keyframes: {
   			'accordion-down': {

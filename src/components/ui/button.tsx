@@ -21,11 +21,16 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         matcha:
           "bg-matcha text-matcha-foreground shadow hover:bg-matcha/90",
+        hero:
+          "bg-cream text-coffee shadow-lg hover:bg-cream/90 font-semibold",
+        "hero-outline":
+          "border-2 border-cream text-cream bg-transparent hover:bg-cream/10 font-semibold",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
+        xl: "h-12 rounded-lg px-10 text-base",
         icon: "h-9 w-9",
       },
     },
