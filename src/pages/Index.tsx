@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
+import About from "@/components/About";
 
 const Index = () => {
     return (
@@ -8,6 +9,7 @@ const Index = () => {
             <Navbar />
             <Hero />
             <Menu />
+            <About />
         </main>
     );
 };
