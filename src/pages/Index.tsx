@@ -4,6 +4,7 @@ import Menu from "@/components/Menu";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Location from "@/components/Location";
+import Footer from "@/components/Footer";
 
 const Index = () => {
     return (
@@ -14,6 +15,7 @@ const Index = () => {
             <About />
             <Testimonials />
             <Location />
+            <Footer />
         </main>
     );
 };
