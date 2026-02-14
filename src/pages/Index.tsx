@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Menu from "@/components/Menu";
 import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
+import Location from "@/components/Location";
 
 const Index = () => {
     return (
@@ -12,6 +13,7 @@ const Index = () => {
             <Menu />
             <About />
             <Testimonials />
+            <Location />
         </main>
     );
 };
