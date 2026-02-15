@@ -70,9 +70,9 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <Button variant="matcha" className="mt-2">
+                            {/* <Button variant="matcha" className="mt-2">
                                 Order Now
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
                 )}

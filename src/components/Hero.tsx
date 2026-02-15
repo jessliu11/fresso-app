@@ -39,9 +39,11 @@ const Hero = () => {
             <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
                 <div className="max-w-3xl mx-auto text-center">
                     {/* Badge */}
-                    <div className="inline-flex items-center gap-2 bg-matcha/20 backdrop-blur-sm text-cream px-4 py-2 rounded-full mb-6 animate-fade-in">
-                        <span className="w-2 h-2 bg-matcha rounded-full animate-pulse" />
-                        <span className="text-sm font-medium" >Valentine's Day Specials Available Through 2/22</span>
+                    <div className="inline-flex items-center gap-2 bg-matcha/20 backdrop-blur-sm text-cream px-4 py-2 rounded-full mb-6 animate-fade-in max-w-[90vw]">
+                        <span className="w-2 h-2 bg-matcha rounded-full animate-pulse flex-shrink-0" />
+                        <span className="text-xs sm:text-sm font-medium text-center leading-relaxed">
+                            Valentine's Day Specials<br className="sm:hidden" /> Available Through 2/22
+                        </span>
                     </div>
                     
                     {/* Heading */}
