@@ -13,13 +13,18 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-background backdrop-blur-md border-b border-border">
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
                     <a href="#" className="flex items-center gap-2">
+                        <img
+                            src="/fresso-logo.png"
+                            alt="Fresso Logo"
+                            className="h-10 lg:h-12 w-auto"
+                        />
                         <span className="font-display text-2xl lg:text-3xl font-bond text-coffee">
-                        Fresso
+                            Fresso
                         </span>
                     </a>
 
@@ -37,11 +42,11 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop Call to Action */}
-                    <div className="hidden md:flex items-center gap-4">
+                    {/* <div className="hidden md:flex items-center gap-4">
                         <Button variant="matcha" size="lg">
                             Order Now
                         </Button>
-                    </div>
+                    </div> */}
 
                     {/* Mobile Menu Button */}
                     { isOpen && (

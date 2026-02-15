@@ -5,10 +5,12 @@ const Footer = () => {
 
     const footerLinks = {
         menu: [
-            { name: "All Drinks",  href: "#menu"},
+            // { name: "All Drinks",  href: "#menu"},
+            { name: "Specialties", href: "#menu" },
             { name: "Matcha", href: "#menu" },
             { name: "Coffee", href: "#menu" },
-            { name: "Milk Tea", href: "#menu" },
+            { name: "Tea", href: "#menu" },
+            { name: "Smoothies", href: "#menu" },
 
         ],
         company: [
@@ -27,14 +29,12 @@ const Footer = () => {
 
     const socialLinks = [
         { icon: Instagram, href: "https://instagram.com/fressocafe", label: "Instagram" },
-        { icon: Facebook, href: "https://facebook.com/fressocafe", label: "Facebook" },
-        { icon: Twitter, href: "https://twitter.com/fressocafe", label: "Twitter" },
-    ];
+    ]
 
     return (
         <footer className="bg-coffee-dark py-16">
             <div className="container mx-auto px-4">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 mg-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 mg-12 pb-8">
                     {/* Brand */}
                     <div className="col-span-2 md:col-span-1">
                         <h3 className="font-display text-2xl font-bold text-cream mb-4">

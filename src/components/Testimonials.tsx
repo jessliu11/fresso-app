@@ -4,12 +4,21 @@ import { Card, CardContent } from "@/components/ui/card";
 const testimonials = [
     {
         id: 1,
-        name: "Sarah M.",
+        name: "Fizzah S.",
         role: "Customer",
         content:
-        "The ceremonial matcha latte here is the best I've had outside of Japan. The atmosphere is so warm and welcoming!",
+        "My favorite matcha place in Houston and I’ve tried ALOT of spots! The creaminess and the quality of the matcha for this price is completely unbeatable. And the staff is always so sweet and warm. Cannot recommend enough",
         rating: 5,
-        avatar: "SM",
+        avatar: "FS",
+    },
+    {
+        id: 2,
+        name: "Kelly E.",
+        role: "Customer",
+        content:
+        "Good matcha and coffee. Great atmosphere and busy shop. The cloud matcha had a coconut foam top which had good strong coconut flavor. The matcha was balanced and creamy. I also got the lotus einspänner coffee. I personally like my coffee stronger, so this drink was more creamy than strong. Personally, I would add an extra shot of espresso.",
+        rating: 5,
+        avatar: "KE",
     },
 ];
 const Testimonials = () => {

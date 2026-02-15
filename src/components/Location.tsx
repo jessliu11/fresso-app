@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const hours = [
     { day: "Monday - Thursday", time: "8:30AM - 8:00PM" },
-    { day: "Friday-Saturday", time: "8:30AM-9PM" },
-    { day: "Sunday", time: "8:30AM-7PM" },
+    { day: "Friday-Saturday", time: "8:30AM-9:00PM" },
+    { day: "Sunday", time: "8:30AM-7:00PM" },
 ];
 
 const contactInfo = [
@@ -45,7 +45,7 @@ const Location = () => {
                                         Missouri City, TX 77459
                                     </p>
                                     <a 
-                                        href="https://maps.google.com"
+                                        href="https://www.google.com/maps?sca_esv=22b7c102b56cf77f&rlz=1C5GCCM_enUS1166US1166&sxsrf=ANbL-n6Eor_ksCpo3zxKm3wJ7AQvx2alvw:1771109968256&kgmid=/g/11yfqtnsxq&kgs=3a0be770717a8d69&shndl=30&shem=epsd1,sume,shrtsdl&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KU8HSnqk50CGMRLTN3XwDa8r&daddr=4899+Hwy+6+Suite+116C,+Missouri+City,+TX+77459"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-primary hover:text-primary/80 font-medium trasnition-colors"

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Leaf, Coffee, Milk, Sparkles } from "lucide-react";
+import { Leaf, Coffee, Milk, Sparkles, CupSoda } from "lucide-react";
 
 type Category = "all" | "matcha" | "coffee" | "tea" | "speciality" | "smoothie";
 
@@ -22,29 +22,29 @@ const menuItems: MenuItem[] = [
         id: 1,
         name: "Matcha Latte",
         description: "Lightly sweetened with agave",
-        price: "$6.90",
+        price: "6.9",
         category: "matcha",
-        image: "🍵",
-        popular: false,
+        image: "",
+        popular: true,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 2,
         name: "Matcha Duo",
         description: "Matcha latte with house matcha cream, contains 6g of matcha",
-        price: "$7.20",
+        price: "7.2",
         category: "matcha",
-        image: "🍵",
-        popular: false,
+        image: " ",
+        popular: true,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 3,
         name: "Einspanner Matcha",
         description: "Matcha latte with house sweet cream",
-        price: "$7.00",
+        price: "7.0",
         category: "matcha",
-        image: "🍵",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -52,29 +52,29 @@ const menuItems: MenuItem[] = [
         id: 4,
         name: "Strawberry Duo",
         description: "Matcha Duo with house strawberry purée",
-        price: "$7.40",
+        price: "7.4",
         category: "matcha",
-        image: "🍵",
-        popular: false,
+        image: " ",
+        popular: true,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 5,
         name: "Mango Duo",
         description: "Matcha Duo with house mango purée",
-        price: "$7.40",
+        price: "7.4",
         category: "matcha",
-        image: "🍵",
-        popular: false,
+        image: " ",
+        popular: true,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 6,
         name: "Cloud Matcha",
         description: "Matcha latte with blue spirulina infused coconut cream",
-        price: "$7.30",
+        price: "7.3",
         category: "matcha",
-        image: "🍵",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -82,9 +82,9 @@ const menuItems: MenuItem[] = [
         id: 7,
         name: "Caffé Duo",
         description: "Latte with espresso cream",
-        price: "$6.10",
+        price: "6.1",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -92,9 +92,9 @@ const menuItems: MenuItem[] = [
         id: 8,
         name: "Vanilla Bean Latte",
         description: "",
-        price: "$5.70",
+        price: "5.7",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -102,9 +102,9 @@ const menuItems: MenuItem[] = [
         id: 9,
         name: "Caffé Mocha",
         description: "Organic Peruvian chocolate",
-        price: "$5.70",
+        price: "5.7",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -112,29 +112,27 @@ const menuItems: MenuItem[] = [
         id: 10,
         name: "Espresso",
         description: "Double shot",
-        price: "$3.50",
+        price: "3.5",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
-        customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 11,
         name: "Americano",
         description: "",
-        price: "$3.50",
+        price: "3.5",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
-        customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 12,
         name: "Flat White",
         description: "",
-        price: "$4.50",
+        price: "4.5",
         category: "coffee",
-        image: "☕",
+        image: " ",
         popular: false,
         customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
@@ -142,19 +140,18 @@ const menuItems: MenuItem[] = [
         id: 13,
         name: "Fresso Black",
         description: "Earthy notes of barley and honey",
-        price: "$5.90",
+        price: "5.9",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
-        customizable: ["Sweetness", "Ice Level", "Milk Choice"],
     },
     {
         id: 14,
         name: "Jasmine Green",
         description: "Floral aroma with a smooth finish",
-        price: "$5.50/$5.90",
+        price: "5.5/5.9",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea", "Milk Tea(+0.4)"],
     },
@@ -162,9 +159,9 @@ const menuItems: MenuItem[] = [
         id: 15,
         name: "Strawberry Green",
         description: "Jasmine green milk tea sweetened with real strawberry chunks",
-        price: "$6.00",
+        price: "6.0",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Milk Tea"],
     },
@@ -172,9 +169,9 @@ const menuItems: MenuItem[] = [
         id: 16,
         name: "Tieguanyin Oolong",
         description: "Medium-dark roast with nuttiness and earthy depth",
-        price: "$5.50/$5.90",
+        price: "5.5/5.9",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea", "Milk Tea(+0.4)"],
     },
@@ -182,9 +179,9 @@ const menuItems: MenuItem[] = [
         id: 17,
         name: "Brown Sugar",
         description: "",
-        price: "$6.00",
+        price: "6.0",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Milk Tea"],
     },
@@ -192,9 +189,9 @@ const menuItems: MenuItem[] = [
         id: 18,
         name: "Mango Green",
         description: "",
-        price: "$5.60/$6.00",
+        price: "5.6/6.0",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea", "Milk Tea(+0.4)"],
     },
@@ -202,9 +199,9 @@ const menuItems: MenuItem[] = [
         id: 19,
         name: "Honey Jasmine Green",
         description: "",
-        price: "$5.70",
+        price: "5.7",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea"],
     },
@@ -212,9 +209,9 @@ const menuItems: MenuItem[] = [
         id: 20,
         name: "Passionfruit Green",
         description: "",
-        price: "$5.70",
+        price: "5.7",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea"],
     },
@@ -222,9 +219,9 @@ const menuItems: MenuItem[] = [
         id: 21,
         name: "Ceylon Black",
         description: "",
-        price: "$5.70/$5.90",
+        price: "5.7/5.9",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea", "Milk Tea(+0.4)"],
     },
@@ -232,9 +229,9 @@ const menuItems: MenuItem[] = [
         id: 22,
         name: "Phoenix Oolong",
         description: "",
-        price: "$5.70/$5.90",
+        price: "5.7/5.9",
         category: "tea",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Pure Tea", "Milk Tea(+0.4)"],
     },
@@ -242,9 +239,9 @@ const menuItems: MenuItem[] = [
         id: 23,
         name: "Tornado",
         description: "Strawberry, Mango, or Strawberry Banana",
-        price: "$6.00",
+        price: "6.0",
         category: "smoothie",
-        image: "🫖",
+        image: " ",
         popular: false,
     },
     {
@@ -253,8 +250,8 @@ const menuItems: MenuItem[] = [
         description: "Marukyu Koyamaen matcha latte with house matcha cream",
         price: "7.2",
         category: "speciality",
-        image: "🫖",
-        popular: false,
+        image: " ",
+        popular: true,
     },
     {
         id: 25,
@@ -262,7 +259,7 @@ const menuItems: MenuItem[] = [
         description: "Double shot espresso latte, topped with sweet cream and Biscoff crumble",
         price: "6.3",
         category: "speciality",
-        image: "🫖",
+        image: " ",
         popular: false,
     },
     {
@@ -271,7 +268,7 @@ const menuItems: MenuItem[] = [
         description: "Signature milk tea with earthy notes of barley and honey, brewed to order",
         price: "5.9",
         category: "speciality",
-        image: "🫖",
+        image: " ",
         popular: false,
         customizable: ["Add toppings for 0.5"],
     },
@@ -281,8 +278,8 @@ const menuItems: MenuItem[] = [
         description: "Matcha Duo with house strawberry purée",
         price: "7.4",
         category: "speciality",
-        image: "🫖",
-        popular: false,
+        image: " ",
+        popular: true,
     },
     {
         id: 29,
@@ -290,8 +287,8 @@ const menuItems: MenuItem[] = [
         description: "",
         price: "6.5",
         category: "speciality",
-        image: "🫖",
-        popular: false,
+        image: " ",
+        popular: true,
     },
     {
         id: 30,
@@ -299,7 +296,7 @@ const menuItems: MenuItem[] = [
         description: "",
         price: "6",
         category: "speciality",
-        image: "🫖",
+        image: " ",
         popular: false,
     },
     {
@@ -308,7 +305,7 @@ const menuItems: MenuItem[] = [
         description: "",
         price: "7.3",
         category: "speciality",
-        image: "🫖",
+        image: " ",
         popular: false,
     },
     {
@@ -317,21 +314,21 @@ const menuItems: MenuItem[] = [
         description: "",
         price: "5.9",
         category: "speciality",
-        image: "🫖",
+        image: " ",
         popular: false,
     }
 ]
 
 const categories = [
-    { id: "all", name: "All Drinks", icons: Sparkles },
-    { id: "speciality", name: "Specialities", icons: Milk },
+    //{ id: "all", name: "All Drinks", icons: Sparkles },
+    { id: "speciality", name: "Specialities", icons: Sparkles },
     { id: "matcha", name: "Matcha", icons: Leaf },
     { id: "coffee", name: "Coffee", icons: Coffee },
     { id: "tea", name: "Tea", icons: Milk },
-    { id: "smoothie", name: "Smoothie", icons: Milk },
+    { id: "smoothie", name: "Smoothie", icons: CupSoda },
 ]
 const Menu = () => {
-    const [activeCategory, setActiveCategory] = useState<Category>("all");
+    const [activeCategory, setActiveCategory] = useState<Category>("speciality");
 
     const filteredItems = 
         activeCategory === "all"
@@ -383,19 +380,20 @@ const Menu = () => {
                             style={{ animationDelay: `${ index * 0.05}s` }}
                         >
                             <CardContent className="p-6">
-                                <div className="flex items-start justify-between mb-4">
+                                <div className="flex items-start justify-between">
                                     <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
                                         {item.image}
                                     </div>
-                                    <div className="text-right">
-                                        <span className="text-xl font-bold text-primary">
-                                            {item.price}
-                                        </span>
+                                    <div className="flex items-center gap-2">
                                         {item.popular && (
-                                            <Badge className="ml-2 bg-matcha/10 text-matcha border-matcha/20">
+                                            <Badge className="bg-matcha/10 text-matcha border-matcha/20">
                                                 Popular
                                             </Badge>
                                         )}
+                                        <span className="text-xl font-bold text-primary">
+                                            {item.price}
+                                        </span>
+                                        
                                     </div>
                                 </div>
 

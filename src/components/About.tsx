@@ -1,17 +1,17 @@
-import { Heart, Leaf, User } from "lucide-react";
+import { Heart, Leaf, User, Coffee, Milk } from "lucide-react";
 
 const values = [
     {
-        icon: Leaf,
+        icon: Milk,
         title: "Tea Bar",
         description:
             "Hand-selected varities from Taiwan. Brewed to order with the GT-2 process."
     },
     {
-        icon: Leaf,
+        icon: Coffee,
         title: "Espresso Bar",
         description:
-            "Locally raosted Central American blend. Velvety notes of dark chocolate and cardamom."
+            "Locally roasted Central American blend. Velvety notes of dark chocolate and cardamom."
     },
     {
         icon: Leaf,
@@ -37,19 +37,19 @@ const About = () => {
                         </h2>
                         <div className="space-y-4 text-muted-foreground">
                             <p>
-                                Fresso was born from a simple dream: to create a space where the 
-                                art of tea and coffee meets genuine hospitality. What started as 
-                                a small corner shop has grown into a beloved neighborhood haven.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                             </p>
                             <p>
-                                Our founders traveled across Japan and Southeast Asia, studying 
-                                traditional brewing methods and sourcing the finest ingredients. 
-                                Today, we bring those authentic flavors to your cup, one sip at a time.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                             </p>
                             <p>
-                                Whether you're here for your morning matcha ritual, an afternoon 
-                                coffee break, or an evening milk tea treat, we're honored to be 
-                                part of your daily moments.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                                enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                             </p>
                         </div>
                     </div>
