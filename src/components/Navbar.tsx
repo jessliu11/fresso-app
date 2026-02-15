@@ -49,25 +49,33 @@ const Navbar = () => {
                     </div> */}
 
                     {/* Mobile Menu Button */}
-                    { isOpen && (
-                        <div className="md:hidden py-4 border-t border-border animate-fade-in">
-                            <div className="flex flex-col gap-4">
-                                {navLinks.map((link) => (
-                                    <a
-                                        key={link.name}
-                                        href={link.href}
-                                        className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
-                                    >
-                                        {link.name}
-                                    </a>
-                                ))}
-                                <Button variant="matcha" className="mt-2">
-                                    Order Now
-                                </Button>
-                            </div>
-                        </div>
-                    )}
+                    <button
+                        className="md:hidden p-2 text-foreground"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
                 </div>
+                {/* Mobile Navigation */}
+                { isOpen && (
+                    <div className="md:hidden py-4 border-t border-border animate-fade-in">
+                        <div className="flex flex-col gap-4">
+                            {navLinks.map((link) => (
+                                <a
+                                    key={link.name}
+                                    href={link.href}
+                                    className="text-foreground/80 hover:text-primary transition-colors font-medium py-2"
+                                >
+                                    {link.name}
+                                </a>
+                            ))}
+                            <Button variant="matcha" className="mt-2">
+                                Order Now
+                            </Button>
+                        </div>
+                    </div>
+                )}
             </div>
         </nav>
     );
